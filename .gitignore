@@ -1,0 +1,8 @@
+build_isolated/
+devel_isolated/
+install_isolated/
+ceres-solver.zip
+protobuf/build/
+ceres-solver/build/
+cartographer/build/
+.vscode/

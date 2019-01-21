@@ -1,0 +1,40 @@
+<robot
+  name="velodyne_urdf">
+   <link
+    name="base_link">
+
+  </link>
+
+
+  <link name="velodyne">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05" />
+      </geometry>
+      <material name="gray" />
+    </visual>
+  </link>
+  <joint name="horizontal_laser_link_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="velodyne" />
+    <origin xyz="0.0 0 0.4" rpy="0 0 0" />
+  </joint>
+
+
+  <link name="imu_link">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <cylinder length="0.01" radius="0.01" />
+      </geometry>
+      <material name="gray" />
+    </visual>
+  </link>
+  <joint name="imu_link_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  
+</robot>
